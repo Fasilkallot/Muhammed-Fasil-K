@@ -195,5 +195,12 @@
 }
 
 @media (max-width: 640px) {
-  .grid { grid-template-columns: 1fr; }
+  .header { margin-bottom: 40px; }
+  .grid { grid-template-columns: 1fr; gap: 16px; }
+  .card { padding: 20px; }
+}
+
+@media (max-width: 400px) {
+  .card { padding: 16px; }
+  .cardTitle { font-size: 1rem; }
 }

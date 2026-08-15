@@ -187,13 +187,22 @@
 @media (max-width: 900px) {
   .inner {
     grid-template-columns: 1fr;
-    gap: 48px;
+    gap: 40px;
   }
   .visual { order: -1; }
   .stats { grid-template-columns: repeat(3, 1fr); }
 }
 
-@media (max-width: 560px) {
-  .stats { grid-template-columns: 1fr; }
+@media (max-width: 600px) {
+  .inner { gap: 32px; }
+  .stats { grid-template-columns: repeat(2, 1fr); }
   .chips { max-width: 100%; }
+  .avatarWrap { width: 200px; height: 200px; }
+  .avatar { width: 140px; height: 140px; }
+  .avatarSvg { width: 110px; height: 110px; }
+  .para { font-size: 0.92rem; }
+}
+
+@media (max-width: 400px) {
+  .stats { grid-template-columns: 1fr; }
 }

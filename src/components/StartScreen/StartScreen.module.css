@@ -176,3 +176,11 @@
 .tr { top: 20px; right: 20px; border-width: 2px 2px 0 0; }
 .bl { bottom: 20px; left: 20px; border-width: 0 0 2px 2px; }
 .br { bottom: 20px; right: 20px; border-width: 0 2px 2px 0; }
+
+@media (max-width: 480px) {
+  .content { gap: 20px; }
+  .terminalBody { padding: 14px; min-height: 220px; gap: 5px; }
+  .line { font-size: 0.78rem; }
+  .startBtn { padding: 14px 32px; letter-spacing: 0.2em; font-size: 0.95rem; }
+  .tl, .tr, .bl, .br { display: none; }
+}

@@ -208,11 +208,20 @@
 
 /* Responsive */
 @media (max-width: 640px) {
+  .header { margin-bottom: 40px; }
   .timelineLine { display: none; }
   .card { flex-direction: column; gap: 0; }
   .node { width: auto; flex-direction: row; padding: 0 0 12px 0; }
   .nodeDot { margin-right: 12px; }
   .nodeRing { display: none; }
-  .cardInner { padding: 18px; }
-  .bullet { flex-direction: column; gap: 6px; }
+  .cardInner { padding: 16px; }
+  .bullet { flex-direction: column; gap: 4px; }
+  .bulletMetric { align-self: flex-start; }
+  .meta { gap: 6px; }
+  .companyRow { gap: 10px; }
+}
+
+@media (max-width: 420px) {
+  .cardInner { padding: 14px; }
+  .company { font-size: 0.9rem; }
 }

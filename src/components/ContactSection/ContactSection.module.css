@@ -227,5 +227,16 @@
 
 @media (max-width: 640px) {
   .footerInner { flex-direction: column; text-align: center; }
-  .contactItem { flex-direction: column; gap: 8px; }
+  .contactItem { flex-direction: row; gap: 0; justify-content: space-between; }
+  .terminalBody { padding: 16px; min-height: 240px; }
+  .terminalWrap { gap: 14px; }
+  .availability { flex-direction: column; align-items: flex-start; gap: 10px; text-align: left; }
+}
+
+@media (max-width: 420px) {
+  .terminalBody { padding: 12px; font-size: 0.8rem; }
+  .line { font-size: 0.78rem; }
+  .contactItem { padding: 12px 14px; }
+  .contactLabel { font-size: 0.75rem; }
+  .contactValue { font-size: 0.68rem; }
 }

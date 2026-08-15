@@ -199,16 +199,26 @@
     overflow-x: auto;
     gap: 8px;
     padding-bottom: 8px;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
   }
+  .categories::-webkit-scrollbar { display: none; }
   .catBtn {
     flex-shrink: 0;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
-    gap: 4px;
-    padding: 12px 16px;
-    text-align: center;
-    font-size: 0.75rem;
+    gap: 8px;
+    padding: 10px 14px;
+    font-size: 0.82rem;
   }
-  .catLabel { display: none; }
-  .catIcon { font-size: 1.4rem; }
+  .catLabel { display: block; font-size: 0.8rem; white-space: nowrap; }
+  .catIcon { font-size: 1.1rem; }
+  .catIndicator { display: none; }
+  .skillsList { padding: 16px; gap: 16px; }
+  .panelHeader { padding: 14px 16px; }
+}
+
+@media (max-width: 480px) {
+  .catBtn { padding: 8px 12px; font-size: 0.76rem; }
+  .catLabel { font-size: 0.75rem; }
 }

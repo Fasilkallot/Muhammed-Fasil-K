@@ -298,11 +298,22 @@
 }
 
 @media (max-width: 900px) {
-  .content { grid-template-columns: 1fr; }
+  .content { grid-template-columns: 1fr; padding: 48px 16px; gap: 32px; }
   .sidebar { position: static; }
   .metricsStrip { flex-wrap: wrap; }
   .metricItem { min-width: 45%; border-right: none; border-bottom: 1px solid rgba(255,255,255,0.06); }
   .techGrid { grid-template-columns: 1fr; }
+  .heroContent { padding: 40px 16px; }
+}
+
+@media (max-width: 640px) {
+  .metricsStrip { flex-direction: column; }
+  .metricItem { min-width: 100%; border-bottom: 1px solid rgba(255,255,255,0.06); }
+  .heroContent { padding: 32px 16px 40px; }
+  .sideCard { padding: 16px; }
+  .main { gap: 36px; }
+  .section { gap: 14px; }
+  .contributionItem { padding: 10px 12px; font-size: 0.83rem; }
 }
 
 /* ============================================================
@@ -400,6 +411,6 @@
 
 @media (max-width: 600px) {
   .heroVisual { display: none; }
-  .heroContent { padding-top: 40px; }
+  .heroContent { padding-top: 32px; }
 }
 

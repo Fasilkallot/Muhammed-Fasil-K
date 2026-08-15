@@ -3,7 +3,6 @@ import { useState, useEffect } from 'react';
 import StartScreen from '@/components/StartScreen/StartScreen';
 import Navbar from '@/components/Navbar/Navbar';
 import HeroSection from '@/components/HeroSection/HeroSection';
-import ImpactStrip from '@/components/ImpactStrip/ImpactStrip';
 import AboutSection from '@/components/AboutSection/AboutSection';
 import ExperienceSection from '@/components/ExperienceSection/ExperienceSection';
 import HowIWorkSection from '@/components/HowIWorkSection/HowIWorkSection';
@@ -44,7 +43,6 @@ export default function Home() {
       >
         <Navbar />
         <HeroSection />
-        <ImpactStrip />
         <AboutSection />
         <ExperienceSection />
         <HowIWorkSection />

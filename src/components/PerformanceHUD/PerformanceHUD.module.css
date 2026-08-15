@@ -63,11 +63,6 @@
   letter-spacing: 0.05em;
 }
 
-@media (max-width: 640px) {
-  .hud {
-    bottom: 80px;
-    right: 12px;
-    font-size: 0.65rem;
-    min-width: 160px;
-  }
+@media (max-width: 768px) {
+  .hud { display: none; }
 }

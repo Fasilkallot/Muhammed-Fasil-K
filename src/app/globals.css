@@ -116,6 +116,16 @@ img, video {
   padding: 0 24px;
 }
 
+@media (max-width: 768px) {
+  .section { padding: 64px 0; }
+  .container { padding: 0 16px; }
+}
+
+@media (max-width: 480px) {
+  .section { padding: 48px 0; }
+  html { font-size: 15px; }
+}
+
 .section-title {
   font-family: var(--font-heading);
   font-size: clamp(1.6rem, 4vw, 2.4rem);
