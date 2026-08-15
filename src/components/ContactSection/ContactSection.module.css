@@ -1,0 +1,231 @@
+.contact {
+  background: var(--bg-deep);
+  position: relative;
+  padding-bottom: 0;
+}
+
+.contact::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--red), transparent);
+}
+
+.inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 48px;
+}
+
+.header {
+  text-align: center;
+}
+
+.terminalWrap {
+  width: min(700px, 100%);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Terminal */
+.terminal {
+  background: rgba(10, 15, 28, 0.96);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-cyan);
+}
+
+.terminalHeader {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 16px;
+  background: rgba(255,255,255,0.03);
+  border-bottom: 1px solid var(--border);
+}
+
+.dots {
+  display: flex;
+  gap: 6px;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.terminalTitle {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--white-30);
+  margin-left: 4px;
+}
+
+.terminalBody {
+  padding: 24px 28px;
+  min-height: 280px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.line {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  opacity: 0;
+  transform: translateX(-8px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.lineVisible { opacity: 1; transform: translateX(0); }
+
+.c_dim   { color: var(--white-30); }
+.c_green { color: #4ade80; }
+.c_cyan  { color: var(--cyan); }
+
+.cursor {
+  color: var(--cyan);
+  animation: blink 1s infinite;
+  font-family: var(--font-mono);
+}
+
+/* Contact items */
+.contacts {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.contactItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 18px;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  text-decoration: none;
+  color: var(--white);
+  transition: border-color 0.2s, background 0.2s, transform 0.2s;
+  animation: fadeInUp 0.4s ease both;
+}
+
+.contactItem:hover {
+  border-color: var(--cyan);
+  background: var(--cyan-dim);
+  transform: translateX(4px);
+}
+
+.contactItem:hover .contactArrow {
+  color: var(--cyan);
+  transform: translateX(4px);
+}
+
+.contactLeft {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.contactIcon {
+  font-size: 1.2rem;
+  color: var(--cyan);
+  width: 24px;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.contactLabel {
+  font-family: var(--font-heading);
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  color: var(--white);
+  margin-bottom: 2px;
+}
+
+.contactValue {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--white-60);
+}
+
+.contactArrow {
+  color: var(--white-30);
+  font-size: 1rem;
+  transition: color 0.2s, transform 0.2s;
+}
+
+/* Availability badge */
+.availability {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 18px 20px;
+  background: rgba(0, 245, 212, 0.06);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+}
+
+.availDot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--cyan);
+  box-shadow: 0 0 10px var(--cyan-glow);
+  animation: pulse-glow 2s infinite;
+  flex-shrink: 0;
+}
+
+.availTitle {
+  font-family: var(--font-heading);
+  font-size: 0.9rem;
+  color: var(--cyan);
+  letter-spacing: 0.06em;
+  margin-bottom: 4px;
+}
+
+.availDesc {
+  font-size: 0.8rem;
+  color: var(--white-60);
+}
+
+/* Footer */
+.footer {
+  margin-top: 80px;
+  border-top: 1px solid rgba(255,255,255,0.06);
+}
+
+.footerInner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 32px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.footerBrand {
+  font-family: var(--font-heading);
+  font-size: 0.9rem;
+  color: var(--cyan);
+  letter-spacing: 0.15em;
+}
+
+.footerText {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--white-30);
+}
+
+@media (max-width: 640px) {
+  .footerInner { flex-direction: column; text-align: center; }
+  .contactItem { flex-direction: column; gap: 8px; }
+}
